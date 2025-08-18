@@ -1,0 +1,7 @@
+# Python requirements (if you use Python scripts or backend)
+
+# Example packages
+flask
+requests
+
+# Add other dependencies as needed
