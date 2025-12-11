@@ -3,6 +3,7 @@ import { Routes, Route, NavLink } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Experience from './pages/Experience';
+import Education from './pages/Education';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import Publications from './pages/Publications';
@@ -26,6 +27,7 @@ function App() {
             { to: '/', label: 'Home' },
             { to: '/about', label: 'About' },
             { to: '/experience', label: 'Experience' },
+            { to: '/education', label: 'Education' },
             { to: '/skills', label: 'Skills' },
             { to: '/projects', label: 'Projects' },
             { to: '/publications', label: 'Publications' },
@@ -51,6 +53,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/experience" element={<Experience />} />
+          <Route path="/education" element={<Education />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/publications" element={<Publications />} />
