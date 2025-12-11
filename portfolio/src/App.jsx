@@ -49,6 +49,13 @@ function App() {
             </a>
           ))}
         </nav>
+        <div className="top-actions">
+          {externalLinks.map((link) => (
+            <a key={link.title} className="top-button" href={link.href} target="_blank" rel="noreferrer">
+              {link.title}
+            </a>
+          ))}
+        </div>
       </header>
 
       <main className="content">

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
   scroll-behavior: smooth;
@@ -6,14 +6,14 @@
 
 :root {
   color-scheme: light;
-  --bg: #f7f6f3;
+  --bg: #f8f9fa;
   --paper: #ffffff;
-  --ink: #1f232b;
-  --muted: #5f6470;
-  --accent: #2f6e8a;
-  --accent-soft: #dbe8ef;
-  --card-border: #e3e4e9;
-  --shadow: 0 18px 40px rgba(19, 29, 45, 0.08);
+  --ink: #202124;
+  --muted: #5f6368;
+  --accent: #1a73e8;
+  --accent-soft: #e8f0fe;
+  --card-border: #dadce0;
+  --shadow: 0 16px 32px rgba(60, 64, 67, 0.12);
   --radius: 14px;
 }
 
@@ -26,10 +26,8 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
-  background: radial-gradient(circle at 15% 20%, rgba(47, 110, 138, 0.06), transparent 24%),
-    radial-gradient(circle at 80% 10%, rgba(107, 149, 169, 0.08), transparent 22%),
-    linear-gradient(180deg, #faf9f6 0%, #f4f3f0 100%);
+  font-family: 'Roboto', 'Inter', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(180deg, #fbfbfb 0%, #f7f8fb 100%);
   color: var(--ink);
   line-height: 1.7;
 }
@@ -49,8 +47,8 @@ h3,
 h4 {
   margin: 0;
   color: var(--ink);
-  font-family: 'Playfair Display', 'Georgia', serif;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  letter-spacing: -0.015em;
 }
 
 ul {
