@@ -87,6 +87,10 @@
   gap: 32px;
 }
 
+.section-wrapper {
+  scroll-margin-top: 120px;
+}
+
 .hero {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -274,6 +278,17 @@
 
 .contact-card {
   max-width: 640px;
+}
+
+.external-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.external-link {
+  display: block;
+  height: 100%;
 }
 
 .contact-row {

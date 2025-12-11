@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const highlights = [
   { label: 'Years shipping software', value: '10+' },
@@ -39,9 +38,9 @@ function Home() {
           <a className="button primary" href="mailto:hishivamhere@gmail.com">
             Let’s talk
           </a>
-          <Link className="button ghost" to="/projects">
+          <a className="button ghost" href="#projects">
             View projects
-          </Link>
+          </a>
         </div>
         <div className="stats">
           {highlights.map((item) => (

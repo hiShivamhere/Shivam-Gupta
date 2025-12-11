@@ -1,15 +1,35 @@
 import React from 'react';
-import { Routes, Route, NavLink } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Experience from './pages/Experience';
 import Education from './pages/Education';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
-import Publications from './pages/Publications';
-import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import './App.css';
+
+const navItems = [
+  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#education', label: 'Education' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#contact', label: 'Contact' },
+];
+
+const externalLinks = [
+  {
+    title: 'Publications',
+    description: 'Talks, papers, and long-form writing. Replace this URL with your live list.',
+    href: 'https://example.com/publications',
+  },
+  {
+    title: 'Blog',
+    description: 'Ongoing notes and experiments. Point this to your preferred platform.',
+    href: 'https://example.com/blog',
+  },
+];
 
 function App() {
   return (
@@ -23,43 +43,61 @@ function App() {
           </div>
         </div>
         <nav className="nav">
-          {[
-            { to: '/', label: 'Home' },
-            { to: '/about', label: 'About' },
-            { to: '/experience', label: 'Experience' },
-            { to: '/education', label: 'Education' },
-            { to: '/skills', label: 'Skills' },
-            { to: '/projects', label: 'Projects' },
-            { to: '/publications', label: 'Publications' },
-            { to: '/blog', label: 'Blog' },
-            { to: '/contact', label: 'Contact' },
-          ].map((item) => (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              className={({ isActive }) =>
-                isActive ? 'nav-link active' : 'nav-link'
-              }
-              end={item.to === '/'}
-            >
+          {navItems.map((item) => (
+            <a key={item.href} href={item.href} className="nav-link">
               {item.label}
-            </NavLink>
+            </a>
           ))}
         </nav>
       </header>
 
       <main className="content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/publications" element={<Publications />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <section id="home" className="section-wrapper">
+          <Home />
+        </section>
+        <section id="about" className="section-wrapper">
+          <About />
+        </section>
+        <section id="experience" className="section-wrapper">
+          <Experience />
+        </section>
+        <section id="education" className="section-wrapper">
+          <Education />
+        </section>
+        <section id="skills" className="section-wrapper">
+          <Skills />
+        </section>
+        <section id="projects" className="section-wrapper">
+          <Projects />
+        </section>
+        <section id="contact" className="section-wrapper">
+          <Contact />
+        </section>
+        <section id="more" className="section-wrapper">
+          <div className="section">
+            <div className="section-header">
+              <p className="eyebrow">More</p>
+              <h2>Publications and blog</h2>
+              <p className="lede">These open in a new tab so recruiters can jump straight to your live content.</p>
+            </div>
+            <div className="external-links">
+              {externalLinks.map((link) => (
+                <a
+                  key={link.title}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="external-link card"
+                >
+                  <div className="pill">External</div>
+                  <h3>{link.title}</h3>
+                  <p className="muted">{link.description}</p>
+                  <span className="text-link">Open link ↗</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer className="site-footer">
